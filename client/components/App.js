@@ -1,10 +1,10 @@
 import React from 'react';
-import Greetings from './Greetings';
+import Navigation from './Navigation';
 
 class App extends React.Component {
     render() {
         return(
-            <Greetings />
+            <Navigation />
         );
     }
 }
