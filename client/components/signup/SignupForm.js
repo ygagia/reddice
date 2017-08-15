@@ -1,6 +1,7 @@
 import React from 'react';
 import timezones from '../../data/timezones';
 import map from 'lodash/map';
+import PropTypes from 'prop-types';
 
 class SignupForm extends React.Component {
     constructor(props) {
@@ -23,7 +24,7 @@ class SignupForm extends React.Component {
 
     onSubmit(e) {
         e.preventDefault();
-        console.log(this.state);
+        this.props.userSignupRequest(this.state);
     }
 
     render() {
@@ -97,6 +98,10 @@ class SignupForm extends React.Component {
             </form>
         );
     }
+}
+
+SignupForm.propTypes = {
+    userSignupRequest: PropTypes.func.isRequired
 }
 
 export default SignupForm;
